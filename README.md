@@ -1,55 +1,34 @@
-GPT Tokenizer From Scratch
-Overview
+# Overview
 
-This project implements GPT-style tokenization mechanisms from scratch, including:
+This project implements GPT-style tokenization mechanisms from first principles to understand how transformer models convert raw text into token IDs.
+It includes: 
+  •Word-level tokenization
+  
+  •UTF-8 byte-level tokenization
+  
+  •Byte Pair Encoding (BPE) training
+  
+  •Merge-statistics based vocabulary construction
+  
+  •Custom encode/decode pipeline
+  
+  •Comparison with GPT-2 and GPT-4 tokenizers using tiktoken library
 
-Word-level tokenization
+  ## Architecture
+  Raw Text → UTF-8 Bytes → BPE Merges → Token IDs → Transformer Input
 
-UTF-8 byte tokenization
+  ## What This Project Demonstrates
+  •Deep understanding of GPT tokenization internals
+  
+  •Subword tokenization via Byte Pair Encoding
 
-Byte Pair Encoding (BPE)
+  •Vocabulary construction from raw text
 
-Merge statistics
+  •Compression analysis
 
-Custom encode/decode pipeline
+  •Differences between GPT-2 and GPT-4 tokenization
 
-Comparison with OpenAI’s GPT-2 and GPT-4 tokenizers
+## Run the following commands to run the project
+pip install -r requirements.txt
 
-What This Project Demonstrates
-
-Deep understanding of how transformers process text
-
-Vocabulary construction
-
-Token compression via BPE
-
-Differences between GPT-2 and GPT-4 tokenization
-
-Regex-based forced token splits
-
-Practical compression ratio analysis
-
-Architecture
-
-Text → UTF-8 Bytes → BPE Merges → Token IDs → Transformer Input
-
-Results Example
-Method	Tokens
-Raw bytes	240
-Custom BPE	132
-GPT-2	128
-Concepts Covered
-
-Tokenization
-
-Vocabulary construction
-
-Subword tokenization
-
-Compression algorithms
-
-UTF-8 encoding
-
-Regex token splitting
-
-GPT tokenization differences
+python demo.py
